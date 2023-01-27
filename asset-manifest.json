@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/dass-frontend/static/css/main.1fe7eeea.css",
+    "main.js": "/dass-frontend/static/js/main.5b31bb1a.js",
+    "static/js/787.2d40d765.chunk.js": "/dass-frontend/static/js/787.2d40d765.chunk.js",
+    "index.html": "/dass-frontend/index.html",
+    "main.1fe7eeea.css.map": "/dass-frontend/static/css/main.1fe7eeea.css.map",
+    "main.5b31bb1a.js.map": "/dass-frontend/static/js/main.5b31bb1a.js.map",
+    "787.2d40d765.chunk.js.map": "/dass-frontend/static/js/787.2d40d765.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1fe7eeea.css",
+    "static/js/main.5b31bb1a.js"
+  ]
+}
