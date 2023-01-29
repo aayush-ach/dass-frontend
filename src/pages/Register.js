@@ -2,8 +2,7 @@ import * as React from "react";
 import { useState, useEffect } from "react";
 import { Link, Navigate } from "react-router-dom";
 import RedditIcon from '@mui/icons-material/Reddit';
-let loggedIn;
-let lIn;
+
 function getStorageValue(key, defaultValue) {
   // getting stored value
   const saved = localStorage.getItem(key);
@@ -27,7 +26,7 @@ function Header() {
   );
 }
 
-let signup;
+
 function LogIn() {
   const [username, setusername] = useState(null);
   const [password, setpassword] = useState(null);
@@ -240,11 +239,9 @@ function MainPart() {
   const [signup, setSignup] = useState(1);
   function handleLogin() {
     setSignup(0);
-    signup = 0;
   }
   function handleSignup() {
     setSignup(1);
-    signup = 1;
   }
   if (signup) {
     return (
@@ -254,7 +251,7 @@ function MainPart() {
         <button
           className="checkSignUp1" onClick={handleSignup}>Sign Up</button>
 
-        <SignUp />;
+        <SignUp />
       </div>
     );
   }
@@ -266,7 +263,7 @@ function MainPart() {
         <button
           className="checkSignUp2" onClick={handleSignup}>Sign Up</button>
 
-        <LogIn />;
+        <LogIn />
       </div>
     );
   }
@@ -281,6 +278,7 @@ export default function Register() {
   return (<html
     className="html"
   >
+    <title>your mom</title>
     <Header />;
     <MainPart />;
   </html>

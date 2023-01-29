@@ -11,11 +11,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
-        <Route path="/" element={<Layout />}>
+        <Route exact path="/" element={<Layout />}>
           <Route index element={<Register />} />
-          <Route path="profile" element={<Profile />} />
+          <Route exact path="profile" element={<Profile />} />
         </Route>
       </Routes>
     </BrowserRouter>

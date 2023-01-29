@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useState,useRef } from "react";
+import { useState } from "react";
 import './Profile.css'
 import ChatIcon from '@mui/icons-material/Chat';
 import HomeIcon from '@mui/icons-material/Home';
@@ -83,12 +83,12 @@ function UserProfile() {
               src="https://i.imgur.com/oWQaSWOb.jpg"
               className="dp"></img>
             <div className="info">
-              <h3>First Name: <input type="text" className="data" disabled={!togf} value={fname} onChange={e => setfname(e.target.value)}/><button className="edit" onClick={handlefButton}>{ togf == 0 && <EditIcon style={{ fontSize: 20 }}></EditIcon>}{togf == 1 && <h4>Save</h4>}</button></h3>
-              <h3>Last Name:  <input type="text" className="data" disabled={!togl} value={lname} onChange={e => setlname(e.target.value)}/><button className="edit" onClick={handlelButton}>{ togl == 0 && <EditIcon style={{ fontSize: 20 }}></EditIcon>}{togl == 1 && <h4>Save</h4>}</button></h3>
-              <h3>Username:   <input type="text" className="data" disabled={!togu} value={uname} onChange={e => setuname(e.target.value)}/><button className="edit" onClick={handleuButton}>{ togu == 0 && <EditIcon style={{ fontSize: 20 }}></EditIcon>}{togu == 1 && <h4>Save</h4>}</button></h3>
-              <h3>Email:  <input type="text" className="data" disabled={!toge} value={email} onChange={e => setemail(e.target.value)}/><button className="edit" onClick={handleeButton}>{ toge == 0 && <EditIcon style={{ fontSize: 20 }}></EditIcon>}{toge == 1 && <h4>Save</h4>}</button></h3>
-              <h3>Contact Number:  <input type="number" className="data" disabled={!togc} value={cno} onChange={e => setcno(e.target.value)}/><button className="edit" onClick={handlecButton}>{ togc == 0 && <EditIcon style={{ fontSize: 20 }}></EditIcon>}{togc == 1 && <h4>Save</h4>}</button></h3>
-              <h3>Age:  <input type="number" className="data" disabled={!toga} value={age} onChange={e => setage(e.target.value)}/><button className="edit" onClick={handleaButton}>{ toga == 0 && <EditIcon style={{ fontSize: 20 }}></EditIcon>}{toga == 1 && <h4>Save</h4>}</button></h3>
+              <h3>First Name: <input type="text" className="data" disabled={!togf} value={fname} onChange={e => setfname(e.target.value)}/><button className="edit" onClick={handlefButton}>{ togf === 0 && <EditIcon style={{ fontSize: 20 }}></EditIcon>}{togf === 1 && <h4>Save</h4>}</button></h3>
+              <h3>Last Name:  <input type="text" className="data" disabled={!togl} value={lname} onChange={e => setlname(e.target.value)}/><button className="edit" onClick={handlelButton}>{ togl === 0 && <EditIcon style={{ fontSize: 20 }}></EditIcon>}{togl === 1 && <h4>Save</h4>}</button></h3>
+              <h3>Username:   <input type="text" className="data" disabled={!togu} value={uname} onChange={e => setuname(e.target.value)}/><button className="edit" onClick={handleuButton}>{ togu === 0 && <EditIcon style={{ fontSize: 20 }}></EditIcon>}{togu === 1 && <h4>Save</h4>}</button></h3>
+              <h3>Email:  <input type="text" className="data" disabled={!toge} value={email} onChange={e => setemail(e.target.value)}/><button className="edit" onClick={handleeButton}>{ toge === 0 && <EditIcon style={{ fontSize: 20 }}></EditIcon>}{toge === 1 && <h4>Save</h4>}</button></h3>
+              <h3>Contact Number:  <input type="number" className="data" disabled={!togc} value={cno} onChange={e => setcno(e.target.value)}/><button className="edit" onClick={handlecButton}>{ togc === 0 && <EditIcon style={{ fontSize: 20 }}></EditIcon>}{togc === 1 && <h4>Save</h4>}</button></h3>
+              <h3>Age:  <input type="number" className="data" disabled={!toga} value={age} onChange={e => setage(e.target.value)}/><button className="edit" onClick={handleaButton}>{ toga === 0 && <EditIcon style={{ fontSize: 20 }}></EditIcon>}{toga === 1 && <h4>Save</h4>}</button></h3>
 
             </div>
         </div>
@@ -98,8 +98,8 @@ function UserProfile() {
           <button className="follBut" onClick={handleF2}>
             <h2>2</h2><br /> Following</button>
             <div className="list">
-              {togf1 == 1 && <ul><li>yeetusonthefetus</li><li>wowsomanyfollowers</li></ul>}
-              {togf2 == 1 && <ul><li>yeetusonthefetus</li><li>wowsomanyfollowing</li></ul>}
+              {togf1 === 1 && <ul><li>yeetusonthefetus</li><li>wowsomanyfollowers</li></ul>}
+              {togf2 === 1 && <ul><li>yeetusonthefetus</li><li>wowsomanyfollowing</li></ul>}
             </div>
           </div>
       </div>
@@ -110,6 +110,7 @@ function LogOut() {
   const loggedIn = 0;
   const [profilelink, setNextLink] = useState("/profile");
   function handleLogOut() {
+    console.log("hi there");
     localStorage.setItem("lIn",JSON.stringify(loggedIn));
     setNextLink("/");
   }
